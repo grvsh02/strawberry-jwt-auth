@@ -18,6 +18,7 @@ class RefreshTokens(models.Model):
     def __str__(self):
         return self.refreshToken
 
+
 __all__ = [
     'RefreshTokens'
 ]
