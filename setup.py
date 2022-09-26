@@ -11,7 +11,7 @@ VERSION = '0.1.0'
 DESCRIPTION = 'A JWT auth library based on Django and strawberry'
 # Setting up
 setup(
-    name="strawberry-jwt-auth",
+    name="strawberry_jwt_auth",
     version=VERSION,
     author="grvsh02 (Gaurav Sharma)",
     author_email="<gaurav021201@gmail.com>",
