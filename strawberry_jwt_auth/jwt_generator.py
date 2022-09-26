@@ -14,7 +14,7 @@ def create_refresh_token(userID: int) -> str:
         algorithm="HS256",
     )
 
-    from models import RefreshTokens
+    from .models import RefreshTokens
     RefreshTokens.objects.create(
         user_id=userID,
         refreshToken=refreshToken,
@@ -30,6 +30,6 @@ def create_access_token(userID: int) -> str:
             "iat": datetime.utcnow(),
             "exp": datetime.utcnow() + timedelta(minutes=1),
         },
-        key=auth_settings.SECRET_KEY,
+        key=SECRET_KEY,
         algorithm="HS256",
     )
