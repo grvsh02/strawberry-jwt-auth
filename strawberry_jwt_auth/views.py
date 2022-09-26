@@ -1,6 +1,6 @@
 from functools import wraps
 
-from jwt_generator import create_access_token, create_refresh_token
+from .jwt_generator import create_access_token, create_refresh_token
 
 
 def strawberry_auth_view(get_response):
