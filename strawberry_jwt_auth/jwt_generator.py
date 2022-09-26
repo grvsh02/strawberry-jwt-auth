@@ -14,7 +14,7 @@ def create_refresh_token(userID: int) -> str:
         algorithm="HS256",
     )
 
-    from refreshTokens import RefreshTokens
+    from models import RefreshTokens
     RefreshTokens.objects.create(
         user_id=userID,
         refreshToken=refreshToken,
