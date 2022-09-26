@@ -2,7 +2,7 @@ import jwt
 from strawberry.extensions import Extension
 from strawberry.types import ExecutionContext
 
-import auth_settings
+from .auth_settings import SECRET_KEY
 
 
 class JWTExtension(Extension):
@@ -19,7 +19,7 @@ class JWTExtension(Extension):
         try:
             return jwt.decode(
                 jwt=self.request.COOKIES[tokenName],
-                key=auth_settings.SECRET_KEY,
+                key=SECRET_KEY,
                 algorithms=["HS256"],  # todo: 1.make this dynamic 2. add nfb and leeway
             )
         except jwt.ExpiredSignatureError:

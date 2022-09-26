@@ -1,7 +1,7 @@
 import jwt
 from django.utils.timezone import datetime, timedelta
 
-import auth_settings
+from .auth_settings import SECRET_KEY
 
 
 def create_refresh_token(userID: int) -> str:
@@ -10,7 +10,7 @@ def create_refresh_token(userID: int) -> str:
             "iat": datetime.utcnow(),
             "exp": datetime.utcnow() + timedelta(days=30),
         },
-        key=auth_settings.SECRET_KEY,
+        key=SECRET_KEY,
         algorithm="HS256",
     )
 
