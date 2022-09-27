@@ -108,6 +108,8 @@ AUTHENTICATION_BACKENDS = [
 
 ## Working Examples
 
+![preview](https://user-images.githubusercontent.com/50337734/192553206-7f05d9b6-3c3e-4975-80e8-885c670c1703.png)
+
 ## Future Plans
 - [ ] Add support for customizing fields like cookies name, token expiry, etc.
 - [ ] Add support for customizing the refresh token model.
