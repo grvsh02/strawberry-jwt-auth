@@ -99,9 +99,7 @@ urlpatterns = [
 9. ( Optional ) Add Authentication backend to your settings.py:
 ```python
 # Use this backend to authenticate users using their email and password
-AUTHENTICATION_BACKENDS = [
-    "strawberry_jwt_auth.backends.JWTAuthBackend",
-]
+AUTHENTICATION_BACKENDS = ['strawberry_jwt_auth.utils.authentication.AuthenticationBackend']
 ```
 ## Working
  Read about Auth0 [here](https://auth0.com/docs)
